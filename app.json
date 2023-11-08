@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "shapeup_Udemy",
-    "slug": "shapeup_Udemy",
+    "slug": "shapeup-udemy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.bertdelaspeed.shapeupudemy"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "42f65f48-e8df-4a43-9f37-84a3872aebea"
+      }
+    },
+    "owner": "bertdelaspeed "
   }
 }
