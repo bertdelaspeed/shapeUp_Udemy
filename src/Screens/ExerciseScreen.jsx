@@ -8,6 +8,7 @@ import { ActivityIndicator } from "react-native";
 import { ScrollView } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { Audio } from "expo-av";
+import BackButton from "../Components/BackButton";
 
 const countDownAudio = require("../../assets/audio/countdownaudio.mp3");
 
@@ -36,13 +37,13 @@ const ExerciseScreen = () => {
     setIsAudioPlaying(true);
   }
 
-  useEffect(() => {
-    return countDownSound
-      ? () => {
-          countDownSound.unloadAsync();
-        }
-      : undefined;
-  }, [countDownSound]);
+  // useEffect(() => {
+  //   return countDownSound
+  //     ? () => {
+  //         countDownSound.unloadAsync();
+  //       }
+  //     : undefined;
+  // }, [countDownSound]);
 
   const fetchGifUrl = async () => {
     try {
@@ -85,7 +86,7 @@ const ExerciseScreen = () => {
       countDownInterval = setInterval(() => {
         setTime((prevTime) => prevTime - 1);
 
-        if (time === 4 && countDownSound) {
+        if (time === 4) {
           // console.log("time is 4");
           playSound();
         }
@@ -124,6 +125,7 @@ const ExerciseScreen = () => {
           <ActivityIndicator size={"large"} color={"gray"} />
         </View>
       )}
+      <BackButton />
       <ScrollView>
         <View className="mt-4 mx-3">
           <Text className="text-2xl font-bold text-center mb-1">
