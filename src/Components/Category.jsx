@@ -10,6 +10,7 @@ const Category = () => {
         <Text className="text-xl font-bold">Categories</Text>
         <AntDesign name="swapright" size={30} color="black" />
       </View>
+
       <CategoryItems />
     </View>
   );

@@ -31,12 +31,14 @@ const WorkoutOTD = () => {
         setWorkoutOTDUrl(url);
         const exerciseName = exerciseUrl.split("/").pop();
         setWorkoutName(exerciseName);
-        navigation.navigate("WorkoutOTDScreen", {
-          name: workoutName,
-          url: workoutOTDUrl,
-        });
       });
     });
+    if (workoutOTDUrl && workoutName) {
+      navigation.navigate("WorkoutOTDScreen", {
+        url: workoutOTDUrl,
+        name: workoutName,
+      });
+    }
   };
 
   return (

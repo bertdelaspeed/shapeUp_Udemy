@@ -41,20 +41,6 @@ const WorkoutOTDScreen = () => {
     setIsAudioPlaying(true);
   }
 
-  const fetchGifUrl = async () => {
-    try {
-      const storageRef = ref(storage, `AllExercises/${item.gif_url}`);
-      const url = await getDownloadURL(storageRef);
-      setGifUrl(url);
-    } catch (error) {
-      console.log("error = ", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchGifUrl();
-  }, []);
-
   const handleDecreaseTime = () => {
     if (!isRunning && time > minTime) {
       setTime((prevTime) => prevTime - 10);
