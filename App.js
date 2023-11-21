@@ -9,6 +9,7 @@ import CalculationScreen from "./src/Screens/CalculationScreen.jsx";
 import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import ExerciseScreen from "./src/Screens/ExerciseScreen.jsx";
 import CategoryExerciseScreen from "./src/Screens/CategoryExerciseScreen.jsx";
+import WorkoutOTDScreen from "./src/Screens/WorkoutOTDScreen.jsx";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -70,6 +71,7 @@ export default function App() {
           name="CategoryExercise"
           component={CategoryExerciseScreen}
         />
+        <Stack.Screen name="WorkoutOTDScreen" component={WorkoutOTDScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
